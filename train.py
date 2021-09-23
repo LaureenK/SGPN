@@ -1,9 +1,10 @@
 import argparse
-import tensorflow as tf
-tf.get_logger().setLevel('WARNING')
-import numpy as np
 import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # see issue #152
+import tensorflow as tf
+import numpy as np
+
 import sys
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
