@@ -1,2 +1,2 @@
-SGPN/data/ply_data_test0.h5
-SGPN/data/ply_data_test1.h5
+SGPN/data/s3dis/Area_2_hallway_11.h5
+SGPN/data/s3dis/Area_2_WC_2.h5
