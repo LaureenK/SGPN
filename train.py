@@ -34,7 +34,7 @@ parser.add_argument('--margin_diff', type=float, default=80., help='Double hinge
 #parser.add_argument('--restore_model', type=str, default='checkpoint/stanford_ins_seg', help='Pretrained model')
 
 parser.add_argument('--output_dir', type=str, default='output', help='Directory that stores all training logs and trained models')
-parser.add_argument('--input_list', type=str, default='data/train_hdf5_file_list.txt', help='Input data list file')
+parser.add_argument('--input_list', type=str, default='data/train_files.txt', help='Input data list file')
 parser.add_argument('--restore_model', type=str, default='output', help='Pretrained model')
 
 FLAGS = parser.parse_args()

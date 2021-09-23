@@ -9,7 +9,7 @@ from models import model
 parser = argparse.ArgumentParser()
 parser.add_argument('--gpu', type=str, default="1", help='GPU to use [default: GPU 1]')
 parser.add_argument('--verbose', action='store_true', help='if specified, use depthconv')
-parser.add_argument('--input_list', type=str, default='/media/hdd2/data/pointnet/stanfordindoor/valid_hdf5_file_list.txt', help='Validation data list')
+parser.add_argument('--input_list', type=str, default='/media/hdd2/data/pointnet/stanfordindoor/test_files.txt', help='Validation data list')
 parser.add_argument('--restore_dir', type=str, default='checkpoint/stanford_ins_seg_groupmask11_fromgroup_recipweight_nopow2_lr4', help='Directory that stores all training logs and trained models')
 FLAGS = parser.parse_args()
 
