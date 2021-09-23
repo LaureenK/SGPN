@@ -133,10 +133,10 @@ def predict():
 
                 ind = (seg == 8)
                 pts_corr_val0 = (pts_corr_val > 1.).astype(np.float)
-                print np.mean(np.transpose(np.abs(pts_corr_label_val[ind] - pts_corr_val0[ind]),axes=[1,0])[ind])
+                print(np.mean(np.transpose(np.abs(pts_corr_label_val[ind] - pts_corr_val0[ind]),axes=[1,0])[ind]))
 
                 ths, ths_, cnt = Get_Ths(pts_corr_val, seg, ins, ths, ths_, cnt)
-                print ths/cnt
+                print(ths/cnt)
 
 
                 if OUTPUT_VERBOSE:

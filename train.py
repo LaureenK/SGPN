@@ -6,7 +6,7 @@ os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # see issue #152
 import sys
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-print BASE_DIR
+print(BASE_DIR)
 sys.path.append(BASE_DIR)
 sys.path.append(os.path.dirname(BASE_DIR))
 sys.path.append(os.path.join(BASE_DIR, '../../'))

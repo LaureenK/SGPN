@@ -18,7 +18,7 @@ def Get_Ths(pts_corr, seg, ins, ths, ths_, cnt):
             hist, bin = np.histogram(pt[pts_in_curins_ind], bins=20)
 
             if seg[ip]==8:
-                print bin
+                print(bin)
 
             numpt_in_curins = np.sum(pts_in_curins_ind)
             numpt_notin_curins = np.sum(pts_notin_curins_ind)
@@ -56,7 +56,7 @@ def Get_Ths(pts_corr, seg, ins, ths, ths_, cnt):
             hist, bin = np.histogram(pt[pts_in_curins_ind], bins=20)
 
             if seg[ip]==8:
-                print bin
+                print(bin)
 
             numpt_in_curins = np.sum(pts_in_curins_ind)
             numpt_notin_curins = np.sum(pts_notin_curins_ind)
@@ -245,7 +245,7 @@ def output_bounding_box_withcorners(box_corners, seg, out_file):
             for line_index in line_indexes:
                 corner0 = box[line_index[0]]
                 corner1 = box[line_index[1]]
-                print corner0.shape
+                print(corner0.shape)
                 dist = np.linalg.norm(corner0 - corner1)
                 dot_num = int(dist / 0.005)
                 delta = (corner1 - corner0) / dot_num
