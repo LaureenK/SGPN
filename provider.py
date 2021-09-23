@@ -29,7 +29,6 @@ def shuffle_data(data, labels):
     np.random.shuffle(idx)
     return data[idx, ...], labels[idx], idx
 
-
 def rotate_point_cloud(batch_data):
     """ Randomly rotate the point clouds to augument the dataset
         rotation is per shape based along up direction
@@ -50,7 +49,6 @@ def rotate_point_cloud(batch_data):
         rotated_data[k, ...] = np.dot(shape_pc.reshape((-1, 3)), rotation_matrix)
     return rotated_data
 
-
 def rotate_point_cloud_by_angle(batch_data, rotation_angle):
     """ Rotate the point cloud along up direction with certain angle.
         Input:
@@ -70,7 +68,6 @@ def rotate_point_cloud_by_angle(batch_data, rotation_angle):
         rotated_data[k, ...] = np.dot(shape_pc.reshape((-1, 3)), rotation_matrix)
     return rotated_data
 
-
 def jitter_point_cloud(batch_data, sigma=0.01, clip=0.05):
     """ Randomly jitter points. jittering is per point.
         Input:
@@ -83,7 +80,6 @@ def jitter_point_cloud(batch_data, sigma=0.01, clip=0.05):
     jittered_data = np.clip(sigma * np.random.randn(B, N, C), -1*clip, clip)
     jittered_data += batch_data
     return jittered_data
-
 
 def save_h5_output(h5_filename, seg, segrefine, group, grouppred, label_dtype='uint8'):
     print(h5_filename)
@@ -124,7 +120,6 @@ def load_h5_data_label_seg(h5_filename):
     label = f['label'][:]
     seg = f['pid'][:]
     return (data, label, seg)
-
 
 def loadDataFile_with_seg(filename):
     return load_h5_data_label_seg(filename)
@@ -184,7 +179,6 @@ def loadDataFile_with_groupseglabel_scannet(filename):
     else:
         seg = f['seglabels'][:]
     return (data, group, cate, seg)
-
 
 def loadDataFile_with_groupseglabel_nuyv2(filename):
     f = h5py.File(filename)
