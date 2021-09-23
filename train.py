@@ -1,8 +1,8 @@
 import argparse
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # see issue #152
 import tensorflow as tf
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 import numpy as np
 
 import sys
