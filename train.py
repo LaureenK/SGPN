@@ -1,5 +1,6 @@
 import argparse
 import tensorflow as tf
+tf.get_logger().setLevel('WARNING')
 import numpy as np
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # see issue #152
