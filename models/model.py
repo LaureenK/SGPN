@@ -40,7 +40,7 @@ def convert_seg_to_one_hot(labels):
     un, cnt = np.unique(labels, return_counts=True)
     label_count_dictionary = dict(zip(un, cnt))
     totalnum = 0
-    for k_un, v_cnt in label_count_dictionary.iteritems():
+    for k_un, v_cnt in label_count_dictionary.items():
         if k_un != -1:
             totalnum += v_cnt
 
