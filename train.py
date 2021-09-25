@@ -195,7 +195,7 @@ def train():
         for i in range(num_train_file):
             cur_train_filename = train_file_list[train_file_idx[i]]
             # printout(flog, 'Loading train file ' + cur_train_filename)
-            cur_data, cur_group, _, cur_seg = provider.loadDataFile_laureen(cur_train_filename)
+            cur_data, cur_group, cur_seg = provider.loadDataFile_laureen(cur_train_filename)
             all_data += [cur_data]
             all_group += [cur_group]
             all_seg += [cur_seg]
