@@ -217,7 +217,7 @@ def loadDataFile_laureen(filename):
     print(data.shape)
     labels = f['labels'][:]
 
-    label, group = np.hsplit(labels, 2)
+    label, group = np.dsplit(labels, 2)
 
     print("label")
     print(label.shape)
