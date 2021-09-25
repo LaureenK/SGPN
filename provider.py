@@ -212,7 +212,7 @@ def loadDataFile_with_groupseglabel_stanfordindoor(filename):
 
 def loadDataFile_laureen(filename):
     f = h5py.File(filename)
-    coords = f['data'][:]
+    data = f['coords'][:]
     labels = f['labels'][:]
 
     label, group = np.hsplit(labels, 2)
