@@ -213,19 +213,15 @@ def loadDataFile_with_groupseglabel_stanfordindoor(filename):
 def loadDataFile_laureen(filename):
     f = h5py.File(filename)
     data = f['coords'][:]
-    print("data")
-    print(data.shape)
     labels = f['labels'][:]
 
     label, group = np.dsplit(labels, 2)
 
     print("label")
-    print(label.shape)
+    print(label)
     print("group")
-    print(group.shape)
+    print(group)
     sys.exit()
-    #label = labels[:][:]
-    #group = labels
 
     return (data, group, label)
 
