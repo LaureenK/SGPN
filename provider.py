@@ -199,6 +199,7 @@ def loadDataFile_with_groupseglabel_stanfordindoor(filename):
     f = h5py.File(filename)
     data = f['data'][:]
     group = f['pid'][:].astype(np.int32)#NxG
+    
     if 'label' in f:
         label = f['label'][:].astype(np.int32)
     else :
@@ -208,6 +209,23 @@ def loadDataFile_with_groupseglabel_stanfordindoor(filename):
     else:
         seg = f['seglabels'][:].astype(np.int32)
     return (data, group, label, seg)
+
+def loadDataFile_laureen(filename):
+    f = h5py.File(filename)
+    data = f['data'][:]
+    labels = f['labels'][:]
+
+    label, group = np.hsplit(labels, 2)
+
+    print("label")
+    print(label)
+    print("group")
+    print(group)
+    sys.exit()
+    #label = labels[:][:]
+    #group = labels
+
+    return (data, group, label)
 
 def loadDataFile_with_img(filename):
     f = h5py.File(filename)
