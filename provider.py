@@ -217,12 +217,6 @@ def loadDataFile_laureen(filename):
 
     label, group = np.dsplit(labels, 2)
 
-    print("label")
-    print(label)
-    print("group")
-    print(group)
-    sys.exit()
-
     return (data, group, label)
 
 def loadDataFile_with_img(filename):
